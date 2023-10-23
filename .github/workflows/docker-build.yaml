@@ -17,4 +17,4 @@ jobs:
           tar xvf buildkit-v0.9.0.linux-amd64.tar.gz
       - name: Build Docker Image
         run: |
-          ./buildctl --addr tcp://buildkitd:1234 build --frontend=dockerfile.v0 --local context=. --local dockerfile=. --output type=image,name=simple
+          ./bin/buildctl --addr tcp://buildkitd:1234 build --frontend=dockerfile.v0 --local context=. --local dockerfile=. --output type=image,name=simple
